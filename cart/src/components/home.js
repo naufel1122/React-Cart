@@ -1,10 +1,7 @@
 import React from 'react'
-import {  
-    Browser
-} 
 
 
-export const home = () => {
+export const Home = () => {
   return (
     <div>this is home</div>
   )
