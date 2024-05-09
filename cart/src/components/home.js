@@ -1,8 +1,7 @@
 import React from 'react'
 
-
 export const Home = () => {
   return (
-    <div>this is home</div>
+    <div>This is Home</div>
   )
 }
