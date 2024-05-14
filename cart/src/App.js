@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 
 function App() {
-  const product = [
+  const productList = [
     {
       Price : 900000,
       name: 'Iphone 15 Pro Max',
@@ -26,7 +26,9 @@ function App() {
   return (
     <>
       <Navbar/>
-    <ProductList product={product}/>     
+      <main className="container mt-5">
+    <ProductList productList={productList}/>     
+      </main>
     <Footer/>  
     </>
   )
