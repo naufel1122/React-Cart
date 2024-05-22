@@ -9,38 +9,37 @@ import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
 import React, { useState } from 'react';
 
-
 function App() {
-  const productList = [
+  const products = [
     {
-      Price: 900000,
+      price: 900000,
       name: 'Iphone 15 Pro Max',
-      Quantity: 0,
+      quantity: 0,
     },
     {
-      Price: 1000000,
+      price: 1000000,
       name: 'Samsung S24 Ultra',
-      Quantity: 0,
+      quantity: 0,
     }
-  ]
+  ];
 
-  let [productList, setProductList] = useState(products)
-   inrementQuantity = (index) => {
-    let newProductList = [...productList]
-    newProductList[index].quantity++
+  let  [productList, setProductList] = useState(products);
+
+  const incrementQuantity = (index) => {
+    let newProductList = [...productList];
+    newProductList[index].quantity++;
     setProductList(newProductList);
-
-  }
+  };
 
   return (
     <>
       <Navbar />
       <main className="container mt-5">
-        <ProductList productList={productList} inrementQuantity={this.inrementQuantity}/>
+        <ProductList productList={productList} incrementQuantity={incrementQuantity} />
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
 export default App;
