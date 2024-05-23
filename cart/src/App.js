@@ -30,12 +30,17 @@ function App() {
     newProductList[index].quantity++;
     setProductList(newProductList);
   };
+  const decrementQuantity = (index) => {
+    let newProductList = [...productList];
+    newProductList[index].quantity > 0 ? newProductList[index].quantity-- : newProductList[index].quantity = 0
+    setProductList(newProductList);
+  };
 
   return (
     <>
       <Navbar />
       <main className="container mt-5">
-        <ProductList productList={productList} incrementQuantity={incrementQuantity} />
+        <ProductList productList={productList} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>
       </main>
       <Footer />
     </>
