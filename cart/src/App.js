@@ -28,10 +28,10 @@ function App() {
 
   const incrementQuantity = (index) => {
     let newProductList = [...productList];
-    let newTotalAmount = [totalAmount];
+    let newTotalAmount = totalAmount;
     newProductList[index].quantity++;
     newTotalAmount += newProductList[index].price
-    setTotalAmount(newTotalAmount)
+    setTotalAmount(newTotalAmount);
     setProductList(newProductList);
   };
   const decrementQuantity = (index) => {
@@ -46,13 +46,22 @@ function App() {
     setProductList(newProductList);
 };
 
+const resetQuantity = () =>{
+  let newProductList = [...productList];
+  newProductList.map((products)=>{
+    products.quantity = 0
+  })
+  setProductList(newProductList);
+  setTotalAmount(0)
+}
+
 return (
   <>
     <Navbar />
     <main className="container mt-5">
       <ProductList productList={productList} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity} />
     </main>
-    <Footer totalAmount={totalAmount} />
+    <Footer totalAmount={totalAmount} resetQuantity={resetQuantity}/>
   </>
 );
 }
