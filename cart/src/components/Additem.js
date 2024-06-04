@@ -1,41 +1,35 @@
+import React from "react";
 class AddItem extends React.Component {
     render() { 
-
-<form>
-  <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">
-      Email address
+return(
+<form className="row">
+  <div className="mb-3 col-4 mb-5">
+    <label htmlFor="inputName" className="form-label">
+      Name
     </label>
     <input
-      type="email"
+      type="text"
       className="form-control"
-      id="exampleInputEmail1"
+      id="inputName"
       aria-describedby="emailHelp"
     />
-    <div id="emailHelp" className="form-text">
-      We'll never share your email with anyone else.
-    </div>
   </div>
-  <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label">
-      Password
+  <div className="mb-3 col-4">
+    <label htmlFor="inputPrice" className="form-label">
+  Price
     </label>
     <input
-      type="password"
+      type="number"
       className="form-control"
-      id="exampleInputPassword1"
+      id="price"
     />
   </div>
-  <div className="mb-3 form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-    <label className="form-check-label" htmlFor="exampleCheck1">
-      Check me out
-    </label>
-  </div>
-  <button type="submit" className="btn btn-primary">
-    Submit
+
+  <button type="submit" className="btn btn-primary col-4">
+    Add 
   </button>
 </form>
+)
     }
 }
 export default AddItem; 

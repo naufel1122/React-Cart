@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
 import React, { useState } from 'react';
+import AddItem from "./components/Additem";
 
 function App() {
   const products = [
@@ -69,6 +70,7 @@ return (
   <>
     <Navbar />
     <main className="container mt-5">
+      <AddItem/>
       <ProductList productList={productList} 
       incrementQuantity={incrementQuantity}
       decrementQuantity={decrementQuantity} 
